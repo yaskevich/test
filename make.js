@@ -8,9 +8,8 @@ arr.push(a);
 	function fn(...args) {
 		if (args.length){
 			let param = args[0];
-			console.log(typeof param,param);
 			if (typeof param == "function"){
-				return 1;
+				return [...arr].reduce((x,y)=>param(x,y));
 			} else {
 				arr.push(param);
 				return fn.apply(args);
@@ -24,7 +23,7 @@ arr.push(a);
 }
 
 var s = make(1)(2)(3)(4)(5);
-console.log(s(add));
+console.log(s(mul));
 // Assert(s(add) == 15);
 // Assert(s(mul) == 120);
 // var x = make(5)(10)(15);
