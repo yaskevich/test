@@ -3,9 +3,12 @@ function mul(x, y) { return x * y; }
 
 function make(a) { 
 console.log("top",a);
+var arr = [];
+arr.push(a);
 	function fn(...args) {
 		if (args.length){
-			console.log(args);
+			console.log(typeof args[0],args[0]);
+			arr.push(args);
 			return fn.apply(args);
 		}
 		return fn;
