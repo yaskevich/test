@@ -2,7 +2,8 @@ function add(x, y) { return x + y; }
 function mul(x, y) { return x * y; }
 function make(a) { 
 
-	
+	function fn() {
+	}
 }
 
 var s = make(1)(2)(3)(4)(5);
