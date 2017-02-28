@@ -3,17 +3,17 @@ function mul(x, y) { return x * y; }
 
 function make(a) { 
 	var arr = [a];
-	return function fn(...args) {
-		let param = args[0];
-		if (typeof param === "function"){
-			return [...arr].reduce((x,y)=>param(x,y));
+	return function fn(b) {
+		
+		if {
+			return (typeof b === "function") ? [...arr].reduce((x,y)=>b(x,y));
 		} else {
-			arr.push(param);
-			// return fn.apply(args);
-			return fn;
+			;
+			
+			return arr.push(b), fn;
 		}
 		
-		return fn;
+		
 	}	
 }
 
