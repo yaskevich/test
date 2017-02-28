@@ -2,9 +2,9 @@ function add(x, y) { return x + y; }
 function mul(x, y) { return x * y; }
 
 function make(a) { 
-	var arr = [a];
-	return function fn(b) {
-			return typeof b === "function" ? [...arr].reduce((x,y)=>b(x,y)): (arr.push(b), fn);
+	var arr = [];
+	return function (b) {
+			return typeof b === "function" ? [...arr].reduce((x,y)=>b(x,y), a): (arr.push(b), arguments.callee);
 	}	
 }
 
