@@ -29,7 +29,7 @@ Codewars
 - [x] 7. [Function Composition](http://www.codewars.com/kata/function-composition)
 - [x] 8. [Function Composition 1](http://www.codewars.com/kata/function-composition-1)
 - [x] 9. [Stringing Me Along](http://www.codewars.com/kata/stringing-me-along)
-- [ ] 10. [I Spy](http://www.codewars.com/kata/i-spy)
+- [x] 10. [I Spy](http://www.codewars.com/kata/i-spy)
 - [x] **Part III**
 - [x] 1. [Santaclausable Interface](http://www.codewars.com/kata/santaclausable-interface)
 - [x] 2. [New With Apply](http://www.codewars.com/kata/new-with-apply)
