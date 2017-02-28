@@ -4,16 +4,7 @@ function mul(x, y) { return x * y; }
 function make(a) { 
 	var arr = [a];
 	return function fn(b) {
-		
-		if {
-			return (typeof b === "function") ? [...arr].reduce((x,y)=>b(x,y));
-		} else {
-			;
-			
-			return arr.push(b), fn;
-		}
-		
-		
+			return typeof b === "function" ? [...arr].reduce((x,y)=>b(x,y)): (arr.push(b), fn);
 	}	
 }
 
