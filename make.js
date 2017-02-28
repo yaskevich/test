@@ -1,12 +1,21 @@
 function add(x, y) { return x + y; }
 function mul(x, y) { return x * y; }
-function make(a) { 
 
-	function fn() {
+function make(a) { 
+console.log("top",a);
+	function fn(...args) {
+		if (args.length){
+			console.log(args);
+			return fn.apply(args);
+		}
+		return fn;
+		
 	}
+	return fn;
 }
 
 var s = make(1)(2)(3)(4)(5);
+s(add);
 // Assert(s(add) == 15);
 // Assert(s(mul) == 120);
 // var x = make(5)(10)(15);
