@@ -7,9 +7,15 @@ var arr = [];
 arr.push(a);
 	function fn(...args) {
 		if (args.length){
-			console.log(typeof args[0],args[0]);
-			arr.push(args);
-			return fn.apply(args);
+			let param = args[0];
+			console.log(typeof param,param);
+			if (typeof param == "function"){
+				return 1;
+			} else {
+				arr.push(param);
+				return fn.apply(args);
+			}
+			
 		}
 		return fn;
 		
@@ -18,7 +24,7 @@ arr.push(a);
 }
 
 var s = make(1)(2)(3)(4)(5);
-s(add);
+console.log(s(add));
 // Assert(s(add) == 15);
 // Assert(s(mul) == 120);
 // var x = make(5)(10)(15);
